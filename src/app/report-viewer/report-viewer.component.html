@@ -1,0 +1,29 @@
+<div>
+  <input [(ngModel)]="applicationNo" placeholder="Enter Application ID" />
+  <button (click)="searchReport()">Search</button>
+</div>
+
+<div *ngIf="isLoading">Loading...</div>
+
+<div *ngIf="!isLoading">
+  <table *ngIf="reportData.length > 0" border="1">
+    <thead>
+      <tr>
+        <th>CSD No</th>
+        <th>Status</th>
+        <th>Full Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of reportData">
+        <td>{{ item.CSDNo }}</td>
+        <td>{{ item.DisplayStatus }}</td>
+        <td>{{ item.FullName }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="reportData.length === 0 && message">
+    {{ message }} 
+  </div>
+</div>

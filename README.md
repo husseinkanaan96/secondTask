@@ -1,27 +1,15 @@
-# SecondTask
+Firstly, I created the server side app called reportViewer so I can create an API for the GET methods i need
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+Secondly, I created a mock data array of 3 inputs instead of using real data 
 
-## Development server
+Thirdly, i created the get method based on a specific URL and can get the desired data by a specific ID. I tested the method based on the ID's in postman and they worked perfectly
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Afterwards, I created this angular app which I named secondTask
 
-## Code scaffolding
+Moreover, I created a component called report-viewer, a service called report
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In addition, in the report-service.ts file, i created aget method using fetch instead of httpClient that fetches the data if found and return an error if not found
 
-## Build
+Additionally, in the report-viewer.ts file, I created a method that searches the records for a report based on an ID entered by the user. If it is found, it will return a table of the data found. If not found, it will return no data found
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Furthermore, in the report-viewer.html file, i created what is need for the data to show after the search according to an ID
